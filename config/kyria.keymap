@@ -7,6 +7,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #define DE_AE (SQT)
+#define DE_UE (LBKT)
+#define DE_OE (SEMI)
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -18,8 +21,8 @@
 // | CTRL |  Z  |  X  |  C   |  V   |  B   | POS1|  END |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                     | WIN  | L ALT  | RET  |  BSPC  |   DEL   |  |   RET   |  SPACE  | ALT GR  | LEFT  | RIGHT |
 			bindings = <
-	&kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT
-	&kp LSHFT   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+	&kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp DE_UE
+	&kp LSHFT   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp DE_OE &kp DE_AE
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp HOME &kp END        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &kp LGUI &kp LALT &kp RET &kp BSPC &kp DEL        &kp RET  &kp SPACE  &kp RALT &kp LEFT &kp RIGHT
 			>;
