@@ -9,11 +9,16 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define DEFAULT 0
+#define L_NUMS 1
+#define L_TEXT 2
+
+
 #define DE_AE (SQT)
 #define DE_UE (LBKT)
 #define DE_OE (SEMI)
 #define DE_SS (MINUS)
-#define DE_-_ (FSLH)
+#define DE_MINUS (FSLH)
 
 / {
 	keymap {
@@ -28,7 +33,7 @@
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                &kp DE_Z &kp U  &kp I     &kp O   &kp P    &kp DE_UE
 	&kp LSHFT   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp DE_OE &kp DE_AE
-	&kp LCTRL &kp DE_Y &kp X &kp C &kp V &kp B &kp HOME &kp END        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp DE_-_ &kp RCTRL
+	&kp LCTRL &kp DE_Y &kp X &kp C &kp V &kp B &kp HOME &kp END        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp DE_MINUS &kp RCTRL
 	                 &kp LGUI &kp LALT &kp RET &kp BSPC &kp DEL        &kp RET  &kp SPACE  &kp RALT &kp LEFT &kp RIGHT
 			>;
 
