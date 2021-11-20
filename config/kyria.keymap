@@ -12,13 +12,7 @@
 #define L_NUMS 1
 #define L_TEXT 2
 
-/*
-#define DE_AE (SQT)
-#define DE_UE (LBKT)
-#define DE_OE (SEMI)
-#define DE_SS (MINUS)
-#define DE_MINUS (FSLH)
-*/
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
@@ -28,13 +22,13 @@
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |TAB/ESC |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |   Ü    |
+ * |TAB/ESC |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |   Ü/ß  |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |GUI/GRAV|A/NAV |S/SEL | D/NUM|   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |RGUI/' "|
+ * |GUI/GRAV|A/NAV |S/SEL | D/NUM|   F  |   G  |                              |   H  |   J  |   K  |   L  |   Ö  |    Ä   |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift |   >  |   X  |   C  |   V  |   B  | [ {  | CAPS |  |F-keys|  ] } |   N  |   M  | ,  < | . >  | /  ? | RShift |
+ * | LShift |   >  |   X  |   C  |   V  |   B  | [ {  | CAPS |  |F-keys|  ] } |   N  |   M  |  ,   |   .  |   -  | RShift |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'	
- *                        |MISION| ShApp| DEL  | Space| TAB  |  | Bksp | ENTER|  ?   |   -  | CAPS |
+ *                        |MISION| ShApp| DEL  | BCKSP| ENF  |  | Enter| Space|  ?   |   -  | CAPS |
  *                        |WARRAN| LCTR |      |      |      |  |      |      | SYM  | RCTR |      |
  *                        `----------------------------------'  `----------------------------------'
  */
