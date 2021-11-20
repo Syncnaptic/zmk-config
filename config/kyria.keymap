@@ -12,25 +12,41 @@
 #define L_NUMS 1
 #define L_TEXT 2
 
-
+/*
 #define DE_AE (SQT)
 #define DE_UE (LBKT)
 #define DE_OE (SEMI)
 #define DE_SS (MINUS)
 #define DE_MINUS (FSLH)
-
+*/
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
+/*
+ * Base Layer: QWERTY
+ *
+ * ,-------------------------------------------.                              ,-------------------------------------------.
+ * |TAB/ESC |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |   Ü    |
+ * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
+ * |GUI/GRAV|A/NAV |S/SEL | D/NUM|   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |RGUI/' "|
+ * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
+ * | LShift |   >  |   X  |   C  |   V  |   B  | [ {  | CAPS |  |F-keys|  ] } |   N  |   M  | ,  < | . >  | /  ? | RShift |
+ * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'	
+ *                        |MISION| ShApp| DEL  | Space| TAB  |  | Bksp | ENTER|  ?   |   -  | CAPS |
+ *                        |WARRAN| LCTR |      |      |      |  |      |      | SYM  | RCTR |      |
+ *                        `----------------------------------'  `----------------------------------'
+ */
+	ü
+
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   LEFT_BRACKET  |
 // |  L SHIFT  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
 // | CTRL |  Z  |  X  |  C   |  V   |  B   | POS1|  END |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                     | WIN  | L ALT  | RET  |  BSPC  |   DEL   |  |   RET   |  SPACE  | ALT GR  | LEFT  | RIGHT |
 			bindings = <
-	&kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                &kp DE_Z &kp U  &kp I     &kp O   &kp P    &kp DE_UE
+	&hm TAB ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp DE_Z &kp U  &kp I     &kp O   &kp P    &hm DE_UE DE_SS
 	&kp LSHFT   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp DE_OE &kp DE_AE
 	&kp LCTRL &kp DE_Y &kp X &kp C &kp V &kp B &kp HOME &kp END        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp DE_MINUS &kp RCTRL
 	                 &kp LGUI &kp LALT &kp RET &kp BSPC &kp DEL        &kp RET  &kp SPACE  &kp RALT &kp LEFT &kp RIGHT
