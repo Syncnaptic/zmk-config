@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -7,6 +8,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "keymap-german-rev3.h"
+									  
+									
 
 #define DEFAULT 0
 #define NAV 1
@@ -72,6 +75,8 @@
 		
 		};
 
+
+
 		navigator_layer {
 /*
  * Nav Layer: Media, navigation
@@ -96,6 +101,33 @@
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
+
+
+		selector_layer {
+/*
+ * Nav Layer: Select, copy/paste  ALL of right side is Shift+
+ *
+ * ,-------------------------------------------.                              ,-------------------------------------------.
+ * |        |      |      |      |      |SEnter|                              | PgUp | Alt← |   ↑  | Alt→ | Home |        |
+ * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
+ * | CAPS   |      |   x  |      |      |Enter |                              | PgDn |  ←   |   ↓  |   →  | End  |        |
+ * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
+ * |        |      |      |      |      |GEnter| Cut  |PstClr|  |      |      |      | Gui← |      | Gui→ |      |        |
+ * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
+ *                        | Undo | Redo |Linki |Copy  | Paste|  |      |      |      |      |      |
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        `----------------------------------'  `----------------------------------'
+ */
+			bindings = <
+      &trans   &trans &trans &trans    &trans    &kp LS(ENTER)                                            &kp LS(PG_UP) &kp LS(LA(LEFT)) &kp LS(UP)   &kp LS(LA(RIGHT)) &kp LS(HOME) &trans
+      &kp CAPS &trans &trans &trans    &trans    &kp ENTER                                                &kp LS(PG_DN) &kp LS(LEFT)     &kp LS(DOWN) &kp LS(RIGHT)     &kp LS(END)  &trans
+      &trans   &trans &trans &trans    &trans    &kp LG(ENTER)     &kp LG(X) &kp LG(LS(V))  &trans &trans &trans        &kp LG(LEFT)     &trans       &kp LG(RIGHT)     &trans       &trans
+                             &kp LG(Z) &kp LG(Y) &kp LG(LC(ENTER)) &kp LG(C) &kp LG(V)      &trans &trans &trans        &trans           &trans 
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+		};
+
 
 		symbols_layer {
 /*
@@ -175,10 +207,7 @@
 
 
 
-
-
-
-
+ 
 
 	};
 };
