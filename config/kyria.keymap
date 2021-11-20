@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <keymap-german-rev3.h>
+#include "keymap-german-rev3.h"
 
 #define DEFAULT 0
 
