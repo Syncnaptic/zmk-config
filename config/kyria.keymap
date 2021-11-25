@@ -82,6 +82,7 @@
 		
 		};
 
+ 
 
 
 		navigator_layer {
@@ -214,7 +215,7 @@
 
 		game_layer {
 /*
- * Base Layer: QWERTZ
+ * Base Layer: GAME
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |TAB/ESC |   1  |   2  |   3  |   4  |   5  |                              |   6  |   7  |   8   |   9  |   0  |   Ü/ß  |
@@ -229,7 +230,7 @@
  */
 
 			bindings = <
-	&mt ESC TAB   &kp N! &kp N2 &kp N3 &kp N4 &kp N5                                                &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &mt DE_SS DE_UE
+	&mt ESC TAB   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                                &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &mt DE_SS DE_UE
 	&kp LCTRL   &kp Q  &kp W &kp E &kp R &kp T                                                &kp H &kp J  &kp K     &kp L   &kp DE_OE &kp DE_AE
 	&kp  LSHFT &kp A &kp S &kp D &kp F &kp G &kp HOME &kp END        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp DE_MINUS &kp RCTRL
 	                 &kp LGUI &tog NAV &kp LGUI &kp BSPC &kp DEL        &kp RET  &kp SPACE  &hm 3 RALT  &kp DOWN &kp UP 
