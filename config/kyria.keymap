@@ -21,6 +21,8 @@
 #define SYMBOLS 3
 #define NUMBERS 4
 #define FNUMBERS 5
+#define GAME 6
+
 
 
 &mt {
@@ -210,7 +212,32 @@
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 
+		game_layer {
+/*
+ * Base Layer: QWERTZ
+ *
+ * ,-------------------------------------------.                              ,-------------------------------------------.
+ * |TAB/ESC |   1  |   2  |   3  |   4  |   5  |                              |   6  |   7  |   8   |   9  |   0  |   Ü/ß  |
+ * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
+ * | LCTR   |  Q    |  W  |  E   |   R  |   T  |                              |   H  |   J  |   K  |   L  |   Ö  |    Ä   |
+ * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
+ * | LShift |   A  |   S  |   D  |   F  |   G  | POS1 | END |   |F-keys|  ] } |   N  |   M  |  ,   |   .  |   -  | RShift |
+ * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'	
+ *                        |MISION| NAV  | WIN  | BCKSP| ENF  |  | Enter| Space| AltGr|   -  | CAPS |
+ *                        |WARRAN| Layer|      |      |      |  |      |      |      | RCTR |      |
+ *                        `----------------------------------'  `----------------------------------'
+ */
 
+			bindings = <
+	&mt ESC TAB   &kp N! &kp N2 &kp N3 &kp N4 &kp N5                                                &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &mt DE_SS DE_UE
+	&kp LCTRL   &kp Q  &kp W &kp E &kp R &kp T                                                &kp H &kp J  &kp K     &kp L   &kp DE_OE &kp DE_AE
+	&kp  LSHFT &kp A &kp S &kp D &kp F &kp G &kp HOME &kp END        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp DE_MINUS &kp RCTRL
+	                 &kp LGUI &tog NAV &kp LGUI &kp BSPC &kp DEL        &kp RET  &kp SPACE  &hm 3 RALT  &kp DOWN &kp UP 
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+		
+		};
 
  
 
