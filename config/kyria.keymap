@@ -181,7 +181,7 @@
      &none    &none &none &none                 &none                 &none                                                &kp KP_PLUS  &kp KP_N7   &kp KP_N8  &kp KP_N9 &kp KP_ASTERISK  &trans
      &kp CAPS &none &none &none                 &none                 &none                                                &kp KP_EQUAL &kp KP_N4   &kp KP_N5  &kp KP_N6 &kp KP_EQUAL     &trans
      &none    &none &none &none                 &none                 &none                 &trans &trans    &trans &trans &kp KP_MINUS &kp KP_N1   &kp KP_N2  &kp KP_N3 &kp KP_SLASH     &trans
-                          &kp LG(LC(LA(LS(A)))) &kp LG(LC(LA(LS(B)))) &kp LG(LC(LA(LS(C)))) &trans &trans    &trans &trans &kp KP_N0    &kp KP_COMMA  &kp KP_DOT
+                          &kp LG(LC(LA(LS(A)))) &kp LG(LC(LA(LS(B)))) &kp LG(LC(LA(LS(C)))) &trans &trans    &trans &trans &kp KP_N0    &kp COMMA   &kp KP_DOT
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
