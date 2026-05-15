@@ -1,0 +1,11 @@
+---
+include:
+  - board: nice_nano//zmk
+    shield: kyria_left
+    artifact-name: kyria_left_nice_nano_zmk
+  - board: nice_nano//zmk
+    shield: kyria_right
+    artifact-name: kyria_right_nice_nano_zmk
+  - board: nice_nano//zmk
+    shield: settings_reset
+    artifact-name: settings_reset_nice_nano_zmk
