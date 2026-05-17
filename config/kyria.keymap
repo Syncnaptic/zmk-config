@@ -13,6 +13,12 @@
 #include <dt-bindings/zmk/outputs.h>
 									  
 									
+#ifdef CONFIG_ZMK_STUDIO
+#define STUDIO_UNLOCK &studio_unlock
+#else
+#define STUDIO_UNLOCK &trans
+#endif
+
 
 #define DEFAULT 0
 #define NAV 1
@@ -91,7 +97,7 @@
  * Nav Layer: Media, navigation
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |      |      |      |                              | PgUp | Alt← |   ↑  | Alt→ | Home |        |
+ * | Studio |      |      |      |      |      |                              | PgUp | Alt← |   ↑  | Alt→ | Home |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |   x  |      |      |      |Bullet|                              | PgDn |  ←   |   ↓  |   →  | End  |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -102,7 +108,7 @@
  *                        `----------------------------------'  `----------------------------------'
  */
 			bindings = <
-      &trans &trans &trans &trans       &trans       &trans                                                          &kp PG_UP  &kp LA(LEFT) &kp UP   &kp LA(RIGHT) &kp HOME &trans
+      STUDIO_UNLOCK &trans &trans &trans       &trans       &trans                                                          &kp PG_UP  &kp LA(LEFT) &kp UP   &kp LA(RIGHT) &kp HOME &trans
       &trans &trans &trans &trans       &trans       &kp LG(LS(N8))                                                  &kp PG_DN  &kp LEFT     &kp DOWN &kp RIGHT     &kp END  &trans
       &trans &trans &trans &trans       &trans       &kp LG(LS(N7)) &trans     &trans   &trans     &kp C_STOP &trans     &kp LG(LEFT) &trans   &kp LG(RIGHT) &trans   &trans
                            &kp LG(LBKT) &to 0  &trans  &trans &trans   &kp C_PREV &kp C_PP   &kp C_NEXT &trans       &trans 
