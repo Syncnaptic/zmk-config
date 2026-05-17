@@ -55,6 +55,7 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
+			display-name = "Base";
 /*
  * Base Layer: QWERTZ
  *
@@ -85,6 +86,7 @@
 
 
 		navigator_layer {
+			display-name = "Nav";
 /*
  * Nav Layer: Media, navigation
  *
@@ -111,6 +113,7 @@
 
 
 		selector_layer {
+			display-name = "Select";
 /*
  * Nav Layer: Select, copy/paste  ALL of right side is Shift+
  *
@@ -137,6 +140,7 @@
 
 
 		symbols_layer {
+			display-name = "Symbols";
 /*
  * Sym Layer: Numbers and symbols
  *
@@ -163,6 +167,7 @@
 
 
 		numbers_layer {
+			display-name = "Numbers";
 /*
  * NUM Layer: Numbers and symbols
  *
@@ -188,6 +193,7 @@
 		};
 
 		fnumbers_layer {
+			display-name = "F-Keys";
 /*
  * Function Layer: Function keys
  *
@@ -213,6 +219,7 @@
 		};
 
 		game_layer {
+			display-name = "Game";
 /*
  * Base Layer: GAME
  *
